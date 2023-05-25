@@ -64,5 +64,15 @@ namespace SubirImagenes
             GuardarJson(productos);
 
         }
+
+        protected void ButtonMostrar_Click(object sender, EventArgs e)
+        {
+            List<Producto> productos = new List<Producto>();
+            productos = LeerJson();
+
+            GridViewProductos.DataSource = productos;
+            GridViewProductos.DataBind();
+
+        }
     }
 }
